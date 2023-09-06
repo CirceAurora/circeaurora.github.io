@@ -1,0 +1,206 @@
+@charset "UTF-8";
+:root {
+  font-size: 1rem;
+  font-family: "Comfortaa", Arial, Helvetica, sans-serif;
+}
+
+body {
+  background-color: #F8C8DC;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 1600 800'%3E%3Cg stroke='%23000000' stroke-width='60' stroke-opacity='0.1' %3E%3Ccircle fill='%23F8C8DC' cx='0' cy='0' r='1800'/%3E%3Ccircle fill='%23f8bcd7' cx='0' cy='0' r='1700'/%3E%3Ccircle fill='%23f9b0d1' cx='0' cy='0' r='1600'/%3E%3Ccircle fill='%23f9a5cc' cx='0' cy='0' r='1500'/%3E%3Ccircle fill='%23fa99c6' cx='0' cy='0' r='1400'/%3E%3Ccircle fill='%23fa8dc1' cx='0' cy='0' r='1300'/%3E%3Ccircle fill='%23fa81bb' cx='0' cy='0' r='1200'/%3E%3Ccircle fill='%23fb76b6' cx='0' cy='0' r='1100'/%3E%3Ccircle fill='%23fb6ab0' cx='0' cy='0' r='1000'/%3E%3Ccircle fill='%23fc5eab' cx='0' cy='0' r='900'/%3E%3Ccircle fill='%23fc52a5' cx='0' cy='0' r='800'/%3E%3Ccircle fill='%23fd47a0' cx='0' cy='0' r='700'/%3E%3Ccircle fill='%23fd3b9a' cx='0' cy='0' r='600'/%3E%3Ccircle fill='%23fd2f95' cx='0' cy='0' r='500'/%3E%3Ccircle fill='%23fe238f' cx='0' cy='0' r='400'/%3E%3Ccircle fill='%23fe188a' cx='0' cy='0' r='300'/%3E%3Ccircle fill='%23ff0c84' cx='0' cy='0' r='200'/%3E%3Ccircle fill='%23FF007F' cx='0' cy='0' r='100'/%3E%3C/g%3E%3C/svg%3E");
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+main {
+  margin: auto;
+  max-width: 80ch;
+  padding: 5rem;
+  position: relative;
+  border-radius: 5rem;
+}
+main::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 5rem;
+  border: 2.5rem solid transparent;
+  background: -o-linear-gradient(250deg, /* border gradient */) border-box;
+  background: linear-gradient(200deg, /* border gradient */) border-box;
+  -webkit-mask: -webkit-gradient(linear, left top, left bottom, color-stop(0, #fff)) padding-box, -webkit-gradient(linear, left top, left bottom, color-stop(0, #fff));
+  -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+  mask: -webkit-gradient(linear, left top, left bottom, color-stop(0, #fff)) padding-box, -webkit-gradient(linear, left top, left bottom, color-stop(0, #fff));
+  mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  z-index: -1;
+}
+main::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.4);
+  border-radius: 5rem;
+  z-index: -2;
+}
+
+h1 {
+  margin-top: 0;
+}
+
+
+.content {
+  -webkit-box-shadow: 0.75rem 0.75rem 0.25rem rgba(0, 0, 0, 0.5);
+  box-shadow: 0.75rem 0.75rem 0.25rem rgba(0, 0, 0, 0.5);
+  border-radius: 1.25rem;
+  margin: 0.5rem;
+}
+.content > div {
+  -webkit-mask: -webkit-gradient(linear, left top, left bottom, color-stop(0, #fff));
+  -webkit-mask: linear-gradient(#fff 0 0);
+  mask: -webkit-gradient(linear, left top, left bottom, color-stop(0, #fff));
+  mask: linear-gradient(#fff 0 0);
+  border-radius: 1.25rem;
+  border: 0.5rem solid transparent;
+}
+.content > div::before {
+  content: "";
+  background: -o-linear-gradient(250deg, /* background gradient */);
+  background: linear-gradient(200deg, /* background gradient */);
+  inset: 0;
+  position: absolute;
+  z-index: -1;
+}
+.content > div > div {
+  border: 0.25rem solid rgba(0, 0, 0, 0.4);
+  border-radius: 1rem;
+}
+.content > div > div > *:not(hr) {
+  padding-inline: 0.5rem;
+}
+.content > div > div > p {
+  margin: 0;
+}
+.content > div > div > *:first-child {
+  margin-top: 0.25rem;
+}
+.content > div > div::before,
+.content > div > div::after {
+  content: "";
+  display: block;
+  height: 0.5rem;
+}
+
+.quotes {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+.quotes > blockquote {
+  -webkit-box-shadow: 0.75rem 0.75rem 0.25rem rgba(0, 0, 0, 0.5);
+  box-shadow: 0.75rem 0.75rem 0.25rem rgba(0, 0, 0, 0.5);
+  border-radius: 1.25rem;
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  margin: 0.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.quotes > blockquote > div {
+  -webkit-mask: -webkit-gradient(linear, left top, left bottom, color-stop(0, #fff));
+  -webkit-mask: linear-gradient(#fff 0 0);
+  mask: -webkit-gradient(linear, left top, left bottom, color-stop(0, #fff));
+  mask: linear-gradient(#fff 0 0);
+  border-radius: 1.25rem;
+  border: 0.5rem solid transparent;
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.quotes > blockquote > div::before {
+  content: "";
+  background: -o-linear-gradient(250deg, /* background gradient */);
+  background: linear-gradient(200deg, /* background gradient */);
+  inset: 0;
+  position: absolute;
+  z-index: -1;
+}
+.quotes > blockquote > div > div {
+  border: 0.25rem solid rgba(0, 0, 0, 0.4);
+  border-radius: 1rem;
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+.quotes > blockquote > div > div::before {
+  content: "";
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+}
+.quotes > blockquote > div > div > * {
+  padding-inline: 0.5rem;
+}
+.quotes > blockquote > div > div > *:first-child {
+  padding-top: 0.5rem;
+}
+.quotes > blockquote > div > div > *:nth-last-child(2) {
+  padding-bottom: 0.5rem;
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+}
+.quotes > blockquote > div > div > p {
+  margin: 0;
+}
+.quotes > blockquote > div > div > p > img {
+  height: 1.15rem;
+  vertical-align: middle;
+}
+.quotes > blockquote > div > div > p + div,
+.quotes > blockquote > div > div > div + p {
+  padding-top: 0.25rem;
+}
+.quotes > blockquote > div > div > div {
+  font-size: 0;
+}
+.quotes > blockquote > div > div > div > img {
+  height: 3rem;
+}
+.quotes > blockquote > div > div > cite {
+  display: block;
+  background-color: rgba(0, 0, 0, 0.2);
+  font-style: normal;
+  border-radius: 0 0 0.75rem 0.75rem;
+  padding: 0.5rem;
+}
+.quotes > blockquote > div > div > cite::before {
+  content: "— ";
+}
+
+footer {
+  margin-top: 4rem;
+  margin-bottom: 2rem;
+  font-size: 0.75rem;
+  text-align: center;
+}
+footer hr {
+  margin-block: 0.5rem;
+}
+
+.ampflower {
+  font-family: "JetBrains Mono", "Courier New", Courier, monospace;
+}

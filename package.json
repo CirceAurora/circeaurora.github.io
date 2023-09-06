@@ -1,5 +1,8 @@
 {
   "dependencies": {
-    "chroma-js": "^2.4.2"
+    "chroma-js": "^2.4.2",
+    "highlight.js": "^11.8.0",
+    "marked": "^8.0.0",
+    "marked-highlight": "^2.0.5"
   }
 }
