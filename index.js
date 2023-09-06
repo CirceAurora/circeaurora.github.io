@@ -145,7 +145,7 @@ async function main() {
             .replace('<!-- about -->', aboutFile)
             .replace('<!-- quotes -->', quotesHtml);
 
-        await fs.mkdir(site);
+        await fs.mkdir('site');
         await fs.writeFile('site/index.html', htmlFile);
     } catch (err) {
         throw err;
