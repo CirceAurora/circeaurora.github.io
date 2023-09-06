@@ -147,8 +147,7 @@ async function main() {
 
         await fs.writeFile('site/index.html', htmlFile);
     } catch (err) {
-        console.log(err);
-        return;
+        throw err;
     }
 
     try {
@@ -182,15 +181,14 @@ async function main() {
 
         await fs.writeFile('site/index.css', cssFile);
     } catch (err) {
-        console.log(err);
-        return;
+        throw err;
     }
 
     try {
         await fs.cp('emojis', 'site/emojis', {recursive: true});
         await fs.cp('images', 'site/images', {recursive: true});
     } catch (err) {
-        console.log(err);
+        throw err;
     }
 }
 
