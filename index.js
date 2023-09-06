@@ -145,6 +145,7 @@ async function main() {
             .replace('<!-- about -->', aboutFile)
             .replace('<!-- quotes -->', quotesHtml);
 
+        await fs.mkdir(site);
         await fs.writeFile('site/index.html', htmlFile);
     } catch (err) {
         throw err;
@@ -185,8 +186,8 @@ async function main() {
     }
 
     try {
-        await fs.cp('emojis', 'site/emojis', {recursive: true});
-        await fs.cp('images', 'site/images', {recursive: true});
+        await fs.cp('emojis', 'site/emojis', { recursive: true });
+        await fs.cp('images', 'site/images', { recursive: true });
     } catch (err) {
         throw err;
     }
