@@ -299,7 +299,10 @@ footer.content {
     >div>div {
         padding-block: 0.5rem;
 
-        >hr,
+        >hr {
+            margin-block: 1rem;
+        }
+
         >p {
             margin-block: 0.5rem;
         }
