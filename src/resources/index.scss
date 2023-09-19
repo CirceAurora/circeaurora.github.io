@@ -234,7 +234,15 @@ main {
                 }
 
                 >p {
-                    margin: 0;
+                    margin-block: 0.5rem;
+
+                    &:first-of-type {
+                        margin-top: 0;
+                    }
+
+                    &:last-of-type {
+                        margin-bottom: 0;
+                    }
 
                     >img.emoji {
                         height: 1.15rem;
