@@ -1,12 +1,19 @@
 {
+  "devDependencies": {
+    "bun-types": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
   "dependencies": {
     "autoprefixer": "^10.4.15",
+    "chroma": "^0.0.1",
     "chroma-js": "^2.4.2",
     "highlight.js": "^11.8.0",
     "html-entities": "^2.4.0",
-    "marked": "^8.0.0",
-    "marked-highlight": "^2.0.5",
-    "postcss": "^8.4.29",
-    "sass": "^1.66.1"
+    "marked": "^9.0.3",
+    "marked-highlight": "^2.0.6",
+    "postcss": "^8.4.30",
+    "sass": "^1.67.0"
   }
 }

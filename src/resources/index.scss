@@ -5,7 +5,7 @@
     font-family: 'Comfortaa', Arial, Helvetica, sans-serif;
     color: black;
     text-shadow: 0 0 0.3rem white;
-    word-wrap : break-word;
+    word-wrap: break-word;
 
     @media (prefers-color-scheme: dark) {
         color: white;
@@ -26,6 +26,10 @@ hr {
     }
 }
 
+section+header {
+    margin-top: 3rem;
+}
+
 a,
 a:link,
 a:active,
@@ -36,20 +40,51 @@ a:visited {
     background-size: 0 0.1rem;
     background-repeat: no-repeat;
     background-position: bottom left, bottom right;
-    transition: background-size 0.25s ease;
-
-    &:focus-visible,
-    &:hover {
-        background-size: 51% 0.1rem;
-    }
-
-    &:focus,
-    &:focus-visible {
-        outline: transparent;
-    }
+    transition: background-size 0.5s ease;
 
     @media (prefers-color-scheme: dark) {
         color: #C0C0FF;
+    }
+}
+
+a:focus-visible,
+a:hover {
+    background-size: calc(50% + 1px) 0.05rem;
+}
+
+a:focus,
+a:focus-visible {
+    outline: transparent;
+}
+
+code,
+.randomize-case {
+    font-family: 'JetBrains Mono', 'Courier New', Courier, monospace;
+}
+
+code {
+    text-shadow: none;
+}
+
+.hljs {
+    border-radius: 1rem;
+    background: rgba(255, 255, 255, 0.5);
+    border: 0.25rem solid rgba(255, 255, 255, 0.5);
+    background-clip: border-box;
+
+    @media (prefers-color-scheme: dark) {
+        background: rgba(0, 0, 0, 0.5);
+        border-color: rgba(0, 0, 0, 0.5);
+    }
+}
+
+code:not(.hljs) {
+    background-color: rgba(255, 255, 255, 0.5);
+    padding-inline: 0.5rem;
+    border-radius: 0.4rem;
+
+    @media (prefers-color-scheme: dark) {
+        background: rgba(0, 0, 0, 0.5);
     }
 }
 
@@ -104,12 +139,12 @@ main {
 
 .content {
     box-shadow: 0.75rem 0.75rem 0.25rem rgba(0, 0, 0, 0.5);
-    border-radius: 1.25rem;
+    border-radius: 1.5rem;
     margin: 0.5rem;
 
     >div {
         mask: linear-gradient(#fff 0 0);
-        border-radius: 1.25rem;
+        border-radius: 1.5rem;
         border: 0.5rem solid transparent;
 
         &::before {
@@ -135,21 +170,6 @@ main {
             >*:not(hr) {
                 padding-inline: 0.5rem;
             }
-
-            >p {
-                margin: 0;
-            }
-
-            >*:first-child {
-                margin-top: 0.25rem;
-            }
-
-            &::before,
-            &::after {
-                content: '';
-                display: block;
-                height: 0.5rem;
-            }
         }
     }
 }
@@ -160,14 +180,14 @@ main {
 
     >blockquote {
         box-shadow: 0.75rem 0.75rem 0.25rem rgba(0, 0, 0, 0.5);
-        border-radius: 1.25rem;
+        border-radius: 1.5rem;
         flex-grow: 1;
         margin: 0.5rem;
         display: flex;
 
         >div {
             mask: linear-gradient(#fff 0 0);
-            border-radius: 1.25rem;
+            border-radius: 1.5rem;
             border: 0.5rem solid transparent;
             flex-grow: 1;
             display: flex;
@@ -216,9 +236,15 @@ main {
                 >p {
                     margin: 0;
 
-                    >img {
+                    >img.emoji {
                         height: 1.15rem;
                         vertical-align: middle;
+                        border-radius: 0.5rem;
+                    }
+
+                    >img:not(.emoji) {
+                        max-width: 100%;
+                        border-radius: 2rem;
                     }
                 }
 
@@ -232,6 +258,7 @@ main {
 
                     >img {
                         height: 3rem;
+                        border-radius: 0.5rem;
                     }
                 }
 
@@ -255,17 +282,18 @@ main {
     }
 }
 
-footer {
+footer.content {
     margin-top: 4rem;
     margin-bottom: 2rem;
     font-size: 0.75rem;
     text-align: center;
 
-    >.content>div>div>hr {
-        margin-block: 0.5rem;
-    }
-}
+    >div>div {
+        padding-block: 0.5rem;
 
-.randomize-case {
-    font-family: 'JetBrains Mono', 'Courier New', Courier, monospace;
+        >hr,
+        >p {
+            margin-block: 0.5rem;
+        }
+    }
 }
