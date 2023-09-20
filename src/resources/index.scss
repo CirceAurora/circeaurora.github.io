@@ -73,6 +73,7 @@ code {
     background-clip: border-box;
     overflow: scroll;
     max-height: 5.625rem;
+    width: 100%;
 
     @media (prefers-color-scheme: dark) {
         background: rgba(0, 0, 0, 0.5);
