@@ -66,6 +66,10 @@ code {
     text-shadow: none;
 }
 
+pre:has(.hljs) {
+    width: 100%;
+}
+
 .hljs {
     border-radius: 1rem;
     background: rgba(255, 255, 255, 0.5);
@@ -73,7 +77,6 @@ code {
     background-clip: border-box;
     overflow: scroll;
     max-height: 5.625rem;
-    width: 100%;
 
     @media (prefers-color-scheme: dark) {
         background: rgba(0, 0, 0, 0.5);
