@@ -71,6 +71,8 @@ code {
     background: rgba(255, 255, 255, 0.5);
     border: 0.25rem solid rgba(255, 255, 255, 0.5);
     background-clip: border-box;
+    overflow: scroll;
+    max-height: 5.625rem;
 
     @media (prefers-color-scheme: dark) {
         background: rgba(0, 0, 0, 0.5);
