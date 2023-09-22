@@ -67,7 +67,7 @@ code {
 }
 
 pre:has(.hljs) {
-    width: 100%;
+    white-space: pre-wrap;
 }
 
 .hljs {
@@ -76,7 +76,7 @@ pre:has(.hljs) {
     border: 0.25rem solid rgba(255, 255, 255, 0.5);
     background-clip: border-box;
     overflow: scroll;
-    max-height: 5.625rem;
+    max-height: 5.75rem;
 
     @media (prefers-color-scheme: dark) {
         background: rgba(0, 0, 0, 0.5);
