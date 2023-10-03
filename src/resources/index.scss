@@ -13,6 +13,11 @@
     }
 }
 
+::before,
+::after {
+    pointer-events: none;
+}
+
 h1 {
     margin-top: 0;
 }
@@ -75,8 +80,6 @@ pre:has(.hljs) {
     background: rgba(255, 255, 255, 0.5);
     border: 0.25rem solid rgba(255, 255, 255, 0.5);
     background-clip: border-box;
-    overflow: scroll;
-    max-height: 5.75rem;
 
     @media (prefers-color-scheme: dark) {
         background: rgba(0, 0, 0, 0.5);
@@ -258,7 +261,7 @@ main {
 
                     >img:not(.emoji) {
                         max-width: 100%;
-                        border-radius: 2rem;
+                        border-radius: 1rem;
                     }
                 }
 
